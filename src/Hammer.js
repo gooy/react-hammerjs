@@ -19,7 +19,8 @@ var privateProps = {
 	onPinch: true,
 	onPinchIn: true,
 	onPinchOut: true,
-	onRotate: true
+	onRotate: true,
+	onHammerInput: true
 };
 
 /**
@@ -72,6 +73,7 @@ var HammerComponent = React.createClass({
 		if (this.props.onPinchIn) this.hammer.on('pinchin', this.props.onPinchIn);
 		if (this.props.onPinchOut) this.hammer.on('pinchout', this.props.onPinchOut);
 		if (this.props.onRotate) this.hammer.on('rotate', this.props.onRotate);
+		if (this.props.onHammerInput) this.hammer.on('hammer.input', this.props.onHammerInput);
 	},
 
 	componentWillUnmount: function () {
